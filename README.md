@@ -1,160 +1,156 @@
-# :warning: Announcements 
-
-Effective September 15th, 2023, the Focalboard plugin will no longer be bundled with Mattermost and will transition to being fully community supported. 
-
-Self-hosted Mattermost instances may continue to use the Focalboard plugin without interruption; however, Mattermost developers will not be adding any new enhancements or bug fixes beyond September 15th, 2023. This Focalboard repository will remain open indefinitely for contributions from the open source community. 
-
-The reason behind these changes is to focus Mattermost developer resources on improving the platform’s performance and core features to ensure Mattermost continues being resilient, stable, and best-in-breed for critical operations.
-
-You can [learn more about these changes in our forum](https://forum.mattermost.com/t/upcoming-product-changes-to-boards-and-various-plugins/16669). 
-
-
-
-# Focalboard
-
-![CI Status](https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg)
-![CodeQL](https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg)
-![Dev Release](https://github.com/mattermost/focalboard/actions/workflows/dev-release.yml/badge.svg)
-![Prod Release](https://github.com/mattermost/focalboard/actions/workflows/prod-release.yml/badge.svg)
-<a href="https://translate.mattermost.com/engage/focalboard/">
-<img src="https://translate.mattermost.com/widgets/focalboard/-/svg-badge.svg" alt="Translation status" />
-</a>
-
-Like what you see? :eyes: Give us a GitHub Star! :star:
-
-![Focalboard](website/site/static/img/hero.jpg)
-
-Focalboard is an open source, multilingual, self-hosted project management tool that's an alternative to Trello, Notion, and Asana.
-
-It helps define, organize, track and manage work across individuals and teams. Focalboard comes in three editions:
-
-* **[Focalboard plugin](https://github.com/mattermost/focalboard/releases)**: The Focalboard plugin integrates into an exsting Mattermost instance to combine project management tools with messaging and collaboration for teams of all sizes. 
-
-* **[Personal Desktop](https://www.focalboard.com/docs/personal-edition/desktop/)**: A standalone, single-user [macOS](https://apps.apple.com/app/apple-store/id1556908618?pt=2114704&ct=website&mt=8), [Windows](https://www.microsoft.com/store/apps/9NLN2T0SX9VF?cid=website), or [Linux](https://www.focalboard.com/download/personal-edition/desktop/#linux-desktop) desktop app for your own todos and personal projects.
-
-* **[Personal Server](https://www.focalboard.com/download/personal-edition/ubuntu/)**: A standalone, multi-user server for development and personal use.
-
-## Try Focalboard
-
-### Mattermost Plugin
-
-After downloading and installing the plugin in the System Console, select the menu in the top left corner and select **Boards**. Access the latest releases of the focalboard plugin by downloading the `mattermost-plugin-focalboard.tar.gz` file from the releases in this repository: https://github.com/mattermost/focalboard/releases
-
-### Personal Desktop (Windows, Mac or Linux Desktop)
-
-* **Windows**: Download from the [Windows App Store](https://www.microsoft.com/store/productId/9NLN2T0SX9VF) or download `focalboard-win.zip` from the [latest release](https://github.com/mattermost/focalboard/releases), unpack, and run `Focalboard.exe`.
-* **Mac**: Download from the [Mac App Store](https://apps.apple.com/us/app/focalboard-insiders/id1556908618?mt=12).
-* **Linux Desktop**: Download `focalboard-linux.tar.gz` from the [latest release](https://github.com/mattermost/focalboard/releases), unpack, and open `focalboard-app`.
-
-### Personal Server
-
-**Ubuntu**: You can download and run the compiled Focalboard **Personal Server** on Ubuntu by following [our latest install guide](https://www.focalboard.com/download/personal-edition/ubuntu/).
-
-### API Docs
-
-Boards API docs can be found over at https://htmlpreview.github.io/?https://github.com/mattermost/focalboard/blob/main/server/swagger/docs/html/index.html
-
-## Contribute to Focalboard
-
-For anyone interested in being an official maintainer of the Focalboard repository, please reach out to us on our [Focalboard Community Channel](https://community.mattermost.com/core/channels/focalboard). If there are no maintainers, and you’re still interested in adding your own improvements to the Focalboard Personal Editions, we encourage you to fork and maintain the repository.
-
-### Getting started
-
-Our [developer guide](https://developers.mattermost.com/contribute/focalboard/personal-server-setup-guide) has detailed instructions on how to set up your development environment for the **Personal Server**. It also provides more information about contributing to our open source community.
-
-Clone [mattermost-server](https://github.com/mattermost/mattermost-server) into sibling directory.
-
-Create an `.env` file in the focalboard directory that contains:
-
-```
-EXCLUDE_ENTERPRISE="1"
-```
-
-To build the server:
-
-```
-make prebuild
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-alert markdown-alert-warning" dir="auto"><p class="markdown-alert-title" dir="auto"><svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警告</font></font></p><p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自 2023 年 9 月 15 日起，Mattermost, Inc. 员工不再在此存储库中审查&ZeroWidthSpace;&ZeroWidthSpace;或合并 Focalboard 或 Mattermost Boards 插件的拉取请求 ( </font></font><code>mattermost/focalboard</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)。</font><font style="vertical-align: inherit;">我们鼓励社区分叉这个存储库以继续开发和贡献。</font></font></strong></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这些变化背后的原因是为了将 Mattermost 开发人员资源集中在改进平台的性能和核心功能上，以确保 Mattermost 继续在关键操作方面保持弹性、稳定和同类最佳。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">️💡</font></font><a href="https://forum.mattermost.com/t/upcoming-product-changes-to-boards-and-various-plugins/16669" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">了解更多</font></font></a></p>
+</div>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">焦点板</font></font></h1><a id="user-content-focalboard" class="anchor" aria-label="永久链接：焦点板" href="#focalboard"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg"><img src="https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg" alt="CI状态" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg"><img src="https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg" alt="代码QL" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/mattermost/focalboard/actions/workflows/dev-release.yml/badge.svg"><img src="https://github.com/mattermost/focalboard/actions/workflows/dev-release.yml/badge.svg" alt="开发版本" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/mattermost/focalboard/actions/workflows/prod-release.yml/badge.svg"><img src="https://github.com/mattermost/focalboard/actions/workflows/prod-release.yml/badge.svg" alt="产品发布" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/mattermost/focalboard/blob/main/website/site/static/img/hero.jpg"><img src="/mattermost/focalboard/raw/main/website/site/static/img/hero.jpg" alt="焦点板" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Focalboard 是一款开源、多语言、自托管的项目管理工具，是 Trello、Notion 和 Asana 的替代品。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">它有助于定义、组织、跟踪和管理个人和团队的工作。</font><font style="vertical-align: inherit;">Focalboard 共有三个版本：</font></font></p>
+<ul dir="auto">
+<li>
+<p dir="auto"><strong><a href="https://github.com/mattermost/focalboard/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Focalboard 插件</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：Focalboard 插件集成到现有的 Mattermost 实例中，将项目管理工具与各种规模的团队的消息传递和协作结合起来。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><a href="https://www.focalboard.com/docs/personal-edition/desktop/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人桌面</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：一个独立的单用户</font></font><a href="https://apps.apple.com/app/apple-store/id1556908618?pt=2114704&amp;ct=website&amp;mt=8" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">macOS</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.microsoft.com/store/apps/9NLN2T0SX9VF?cid=website" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Windows</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><a href="https://www.focalboard.com/download/personal-edition/desktop/#linux-desktop" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linux</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">桌面应用程序，用于您自己的待办事项和个人项目。</font></font></p>
+</li>
+<li>
+<p dir="auto"><strong><a href="https://www.focalboard.com/download/personal-edition/ubuntu/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人服务器</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：用于开发和个人使用的独立多用户服务器。</font></font></p>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">尝试 Focalboard</font></font></h2><a id="user-content-try-focalboard" class="anchor" aria-label="永久链接：尝试 Focalboard" href="#try-focalboard"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最重要的插件</font></font></h3><a id="user-content-mattermost-plugin" class="anchor" aria-label="永久链接：Mattermost 插件" href="#mattermost-plugin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在系统控制台中下载并安装插件后，选择左上角的菜单并选择</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Boards</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">通过从此存储库中的版本下载文件来访问焦点板插件的最新版本</font></font><code>mattermost-plugin-focalboard.tar.gz</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">： https: </font></font><a href="https://github.com/mattermost/focalboard/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">//github.com/mattermost/focalboard/releases</font></font></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人桌面（Windows、Mac 或 Linux 桌面）</font></font></h3><a id="user-content-personal-desktop-windows-mac-or-linux-desktop" class="anchor" aria-label="永久链接：个人桌面（Windows、Mac 或 Linux 桌面）" href="#personal-desktop-windows-mac-or-linux-desktop"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Windows</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：从</font></font><a href="https://www.microsoft.com/store/productId/9NLN2T0SX9VF" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Windows App Store</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载或</font></font><code>focalboard-win.zip</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从</font></font><a href="https://github.com/mattermost/focalboard/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新版本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载、解压并运行</font></font><code>Focalboard.exe</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mac ：从</font></font></strong><font style="vertical-align: inherit;"></font><a href="https://apps.apple.com/us/app/focalboard-insiders/id1556908618?mt=12" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mac App Store</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font><font style="vertical-align: inherit;">。</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linux 桌面</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><code>focalboard-linux.tar.gz</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从</font></font><a href="https://github.com/mattermost/focalboard/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新版本</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载、解压并打开</font></font><code>focalboard-app</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">个人服务器</font></font></h3><a id="user-content-personal-server" class="anchor" aria-label="永久链接：个人服务器" href="#personal-server"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ubuntu</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ：您可以按照</font><a href="https://www.focalboard.com/download/personal-edition/ubuntu/" rel="nofollow"><font style="vertical-align: inherit;">我们最新的安装指南</font></a><font style="vertical-align: inherit;">在 Ubuntu 上下载并运行已编译的 Focalboard </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Personal Server</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><a href="https://www.focalboard.com/download/personal-edition/ubuntu/" rel="nofollow"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">API文档</font></font></h3><a id="user-content-api-docs" class="anchor" aria-label="永久链接：API 文档" href="#api-docs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><a href="https://htmlpreview.github.io/?https://github.com/mattermost/focalboard/blob/main/server/swagger/docs/html/index.html" rel="nofollow"><font style="vertical-align: inherit;">Boards API 文档可以在https://htmlpreview.github.io/?https://github.com/mattermost/focalboard/blob/main/server/swagger/docs/html/index.html</font></a><font style="vertical-align: inherit;">找到</font></font><a href="https://htmlpreview.github.io/?https://github.com/mattermost/focalboard/blob/main/server/swagger/docs/html/index.html" rel="nofollow"><font style="vertical-align: inherit;"></font></a></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></h3><a id="user-content-getting-started" class="anchor" aria-label="永久链接：开始使用" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们的</font></font><a href="https://developers.mattermost.com/contribute/focalboard/personal-server-setup-guide" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">详细说明了如何设置个人</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的开发环境。</font><font style="vertical-align: inherit;">您还可以加入</font></font><a href="https://community.mattermost.com/core/channels/focalboard" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">~Focalboard 社区频道</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">与其他开发者联系。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将</font></font><a href="https://github.com/mattermost/mattermost-server"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mattermost-server</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">克隆到同级目录中。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><code>.env</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 focusboard 目录中</font><font style="vertical-align: inherit;">创建一个文件，其中包含：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>EXCLUDE_ENTERPRISE="1"
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="EXCLUDE_ENTERPRISE=&quot;1&quot;" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建服务器：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>make prebuild
 make
-```
-
-To run the server:
-
-```
- ./bin/focalboard-server
-```
-
-Then navigate your browser to [`http://localhost:8000`](http://localhost:8000) to access your Focalboard server. The port is configured in `config.json`.
-
-Once the server is running, you can rebuild just the web app via `make webapp` in a separate terminal window. Reload your browser to see the changes.
-
-### Building and running standalone desktop apps
-
-You can build standalone apps that package the server to run locally against SQLite:
-
-* **Windows**:
-    * *Requires Windows 10, [Windows 10 SDK](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/) 10.0.19041.0, and .NET 4.8 developer pack*
-    * Open a `git-bash` prompt.
-    * Run `make prebuild`
-    * The above prebuild step needs to be run only when you make changes to or want to install your npm dependencies, etc.
-    * Once the prebuild is completed, you can keep repeating the below steps to build the app & see the changes.
-    * Run `make win-wpf-app`
-    * Run `cd win-wpf/msix && focalboard.exe`
-* **Mac**:
-    * *Requires macOS 11.3+ and Xcode 13.2.1+*
-    * Run `make prebuild`
-    * The above prebuild step needs to be run only when you make changes to or want to install your npm dependencies, etc.
-    * Once the prebuild is completed, you can keep repeating the below steps to build the app & see the changes.
-    * Run `make mac-app`
-    * Run `open mac/dist/Focalboard.app`
-* **Linux**:
-    * *Tested on Ubuntu 18.04*
-    * Install `webgtk` dependencies
-        * Run `sudo apt-get install libgtk-3-dev`
-        * Run `sudo apt-get install libwebkit2gtk-4.0-dev`
-    * Run `make prebuild`
-    * The above prebuild step needs to be run only when you make changes to or want to install your npm dependencies, etc.
-    * Once the prebuild is completed, you can keep repeating the below steps to build the app & see the changes.
-    * Run `make linux-app`
-    * Uncompress `linux/dist/focalboard-linux.tar.gz` to a directory of your choice
-    * Run `focalboard-app` from the directory you have chosen
-* **Docker**:
-    * To run it locally from offical image:
-        * `docker run -it -p 80:8000 mattermost/focalboard`
-    * To build it for your current architecture:
-        * `docker build -f docker/Dockerfile .`
-    * To build it for a custom architecture (experimental):
-        * `docker build -f docker/Dockerfile --platform linux/arm64 .`
-
-Cross-compilation currently isn't fully supported, so please build on the appropriate platform. Refer to the GitHub Actions workflows (`build-mac.yml`, `build-win.yml`, `build-ubuntu.yml`) for the detailed list of steps on each platform.
-
-### Unit testing
-
-Before checking in commits, run `make ci`, which is similar to the `.gitlab-ci.yml` workflow and includes:
-
-* **Server unit tests**: `make server-test`
-* **Web app ESLint**: `cd webapp; npm run check`
-* **Web app unit tests**: `cd webapp; npm run test`
-* **Web app UI tests**: `cd webapp; npm run cypress:ci`
-
-### Translating
-
-Help translate Focalboard! The plugin is already translated into several languages. We welcome corrections and new language translations submitted against the [appropriate language JSON file](https://github.com/mattermost/focalboard/tree/main/webapp/i18n) in this repository. To add a new language, follow the steps below:
-
-- Create a new file with the language code (I.E. `en.json`) inside `webapp/i18n` directory
-- Copy the contents of the en.json file into your newly created file
-- Leave the keys in this file as they are and replace all the values with the translated strings
-- Go to `webapp/src/constants.ts` and add an entry for the language you are translating into under the **languages** array
-- This array needs to consist of three keys: the language code, the name of the language and the display name of the language
-- Go to `webapp/src/i18n.tsx`:
-    - import the json of the language translation you have just added
-    - Add the language code to the `supportedLanguages` array
-    - Add another case to the switch case matching the language you added inside `getMessages`
-- Once you are done, you need to update the snapshot by using this command `npm run updatesnapshot`
-
-
-### Staying informed
-
-* **Changes**: See the [CHANGELOG](CHANGELOG.md) for the latest updates
-* **GitHub Discussions**: Join the [Developer Discussion](https://github.com/mattermost/focalboard/discussions) board
-* **Bug Reports**: [File a bug report](https://github.com/mattermost/focalboard/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
-* **Chat**: Join the [Focalboard community channel](https://community.mattermost.com/core/channels/focalboard)
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="make prebuild
+make" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行服务器：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code> ./bin/focalboard-server
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value=" ./bin/focalboard-server" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">然后导航您的浏览器以</font></font><a href="http://localhost:8000" rel="nofollow"><code>http://localhost:8000</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">访问您的 Focalboard 服务器。</font><font style="vertical-align: inherit;">该端口在 中配置</font></font><code>config.json</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器运行后，您可以通过</font></font><code>make webapp</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">单独的终端窗口重建 Web 应用程序。</font><font style="vertical-align: inherit;">重新加载浏览器以查看更改。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建和运行独立的桌面应用程序</font></font></h3><a id="user-content-building-and-running-standalone-desktop-apps" class="anchor" aria-label="永久链接：构建和运行独立桌面应用程序" href="#building-and-running-standalone-desktop-apps"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以构建独立的应用程序来打包服务器以针对 SQLite 本地运行：</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">窗户</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：
+</font></font><ul dir="auto">
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要 Windows 10、</font></font><a href="https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Windows 10 SDK</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 10.0.19041.0 和 .NET 4.8 开发人员包</font></font></em></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打开</font></font><code>git-bash</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提示。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make prebuild</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅当您进行更改或想要安装 npm 依赖项等时，才需要运行上述预构建步骤。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">预构建完成后，您可以继续重复以下步骤来构建应用程序并查看更改。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make win-wpf-app</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>cd win-wpf/msix &amp;&amp; focalboard.exe</code></li>
+</ul>
+</li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">苹果</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：
+</font></font><ul dir="auto">
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要 macOS 11.3+ 和 Xcode 13.2.1+</font></font></em></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make prebuild</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅当您进行更改或想要安装 npm 依赖项等时，才需要运行上述预构建步骤。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">预构建完成后，您可以继续重复以下步骤来构建应用程序并查看更改。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make mac-app</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>open mac/dist/Focalboard.app</code></li>
+</ul>
+</li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linux</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：
+</font></font><ul dir="auto">
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Ubuntu 18.04 上测试</font></font></em></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装</font></font><code>webgtk</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖项
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>sudo apt-get install libgtk-3-dev</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>sudo apt-get install libwebkit2gtk-4.0-dev</code></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make prebuild</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅当您进行更改或想要安装 npm 依赖项等时，才需要运行上述预构建步骤。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">预构建完成后，您可以继续重复以下步骤来构建应用程序并查看更改。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跑步</font></font><code>make linux-app</code></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">解压</font></font><code>linux/dist/focalboard-linux.tar.gz</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">到您选择的目录</font></font></li>
+<li><font style="vertical-align: inherit;"></font><code>focalboard-app</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从您选择的目录</font><font style="vertical-align: inherit;">运行</font></font></li>
+</ul>
+</li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">码头工人</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要从官方映像本地运行它：
+</font></font><ul dir="auto">
+<li><code>docker run -it -p 80:8000 mattermost/focalboard</code></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要为您当前的架构构建它：
+</font></font><ul dir="auto">
+<li><code>docker build -f docker/Dockerfile .</code></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为自定义架构构建它（实验性的）：
+</font></font><ul dir="auto">
+<li><code>docker build -f docker/Dockerfile --platform linux/arm64 .</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目前不完全支持交叉编译，因此请在适当的平台上构建。</font><font style="vertical-align: inherit;">请参阅 GitHub Actions 工作流程 ( </font></font><code>build-mac.yml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><code>build-win.yml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><code>build-ubuntu.yml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">)，了解每个平台上的步骤的详细列表。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">单元测试</font></font></h3><a id="user-content-unit-testing" class="anchor" aria-label="永久链接：单元测试" href="#unit-testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在签入提交之前，运行</font></font><code>make ci</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，这与工作流程类似</font></font><code>.gitlab-ci.yml</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，包括：</font></font></p>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器单元测试</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><code>make server-test</code></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网络应用程序 ESLint</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><code>cd webapp; npm run check</code></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Web 应用程序单元测试</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><code>cd webapp; npm run test</code></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Web 应用程序 UI 测试</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><code>cd webapp; npm run cypress:ci</code></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">随时了解情况</font></font></h3><a id="user-content-staying-informed" class="anchor" aria-label="永久链接：随时了解情况" href="#staying-informed"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更改</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：请参阅</font></font><a href="/mattermost/focalboard/blob/main/CHANGELOG.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更改日志</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以获取最新更新</font></font></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">错误报告</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font><a href="https://github.com/mattermost/focalboard/issues/new?assignees=&amp;labels=bug&amp;template=bug_report.md&amp;title="><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提交错误报告</font></font></a></li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">聊天</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：加入</font></font><a href="https://community.mattermost.com/core/channels/focalboard" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">~Focalboard 社区频道</font></font></a></li>
+</ul>
+</article></div>
